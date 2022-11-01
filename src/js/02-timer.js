@@ -2,7 +2,6 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 // import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-
 const startBtn = document.querySelector('button[data-start]');
 const daysData = document.querySelector('span[data-days]');
 const hoursData = document.querySelector('span[data-hours]');
@@ -67,9 +66,28 @@ function convertMs(ms) {
   // Remaining seconds
   const seconds = addLeadingZero(Math.floor((((ms % day) % hour) % minute) / second));
 
-    
-  return { days, hours, minutes, seconds };
+ return { days, hours, minutes, seconds };
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*Element.setAttribute()
@@ -84,3 +102,23 @@ value - значение атрибута.
 Copy to Clipboard
 var b = document.querySelector("button");
 b.setAttribute("disabled", "disabled");*/
+
+
+/*Метод padStart() заполняет текущую строку другой строкой (несколько раз, если нужно) так, 
+что итоговая строка достигает заданной длины. Заполнение осуществляется в начале (слева) текущей строки.
+Синтаксис
+str.padStart(targetLength [, padString])
+Параметры
+targetLength
+Длина итоговой строки после дополнения текущей строки. Если значение меньше, чем длина текущей строки, текущая строка будет возвращена без изменений.
+padString Необязательный
+Строка для заполнения текущей строки. Если эта строка слишком длинная для заданной длины, она будет обрезана. Значение по умолчанию - " " (U+0020).
+Возвращаемое значение
+String заданной длины с заполнением строкой, выполненное в начале.
+Примеры
+'abc'.padStart(10);         // "       abc"
+'abc'.padStart(10, "foo");  // "foofoofabc"
+'abc'.padStart(6,"123465"); // "123abc"
+'abc'.padStart(8, "0");     // "00000abc"
+'abc'.padStart(1);          // "abc"
+*/
