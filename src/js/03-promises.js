@@ -33,6 +33,5 @@ function onFormSubmit(e) {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
     delay += step;
-  };
-  
+  };  
  }
